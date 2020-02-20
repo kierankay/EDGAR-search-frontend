@@ -3,6 +3,10 @@ let BASE_URL = process.env.REACT_APP_API_URL
 
 class EdgarApi {
   static async request(endpoint, data = {}, method = 'get') {
+<<<<<<< HEAD
+=======
+    data.token = localStorage.getItem('token');
+>>>>>>> Added getByTicker and getById APIs
     try {
       return (await axios({
         method,
@@ -10,7 +14,11 @@ class EdgarApi {
         [method === "get" ? "params" : "data"]: data
       })).data
     } catch (err) {
+<<<<<<< HEAD
       console.log(endpoint, BASE_URL)
+=======
+      console.log(endpoint, data, method)
+>>>>>>> Added getByTicker and getById APIs
       console.log("API ERROR:", err);
       let message = err.response ? err.response.data.message : err;
       throw Array.isArray(message) ? message : [message];
