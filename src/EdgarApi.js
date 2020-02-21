@@ -8,7 +8,7 @@ class EdgarApi {
       return (await axios({
         method,
         url: `${BASE_URL}/api${endpoint}`,
-        [method === "get" ? "params" : "data"]: data,
+        [method === 'get' ? 'params' : 'data']: data,
       })).data;
     } catch (err) {
       console.log(endpoint, BASE_URL);
@@ -29,7 +29,6 @@ class EdgarApi {
     const result = await this.request(`/forms/${id}`);
     return result;
   }
-
 }
 
 export default EdgarApi;
