@@ -1,10 +1,8 @@
 import React from 'react';
-import EdgarApi from '../EdgarApi';
 import moment from 'moment';
 
 const ResultsBox = props => {
     const { formData } = props;
-    const base_url = 'https://www.sec.gov/Archives/edgar/data'
     const base_xbrl_url = 'https://www.sec.gov/ix?doc=/Archives/edgar/data'
     let renderedForms;
 

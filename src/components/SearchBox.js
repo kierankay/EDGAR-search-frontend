@@ -3,7 +3,6 @@ import EdgarApi from '../EdgarApi';
 
 const SearchBox = (props) => {
     const [ticker, setTicker] = useState('');
-    const [errMsg, setErrMsg] = useState('false');
     const { setFormData } = props;
 
     async function handleSubmit(evt) {
