@@ -3,15 +3,15 @@ import Navbar from './Navbar';
 import Routes from './Routes';
 import '../App.css';
 
-const App = (props) => {
+const App = () => {
   const [formData, setFormData] = useState('');
 
   return (
     <div className="App">
       <Navbar />
-      <Routes setFormData={setFormData} formData={formData}/>
+      <Routes setFormData={setFormData} formData={formData} />
     </div>
   );
-}
+};
 
 export default App;

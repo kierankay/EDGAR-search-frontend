@@ -1,18 +1,16 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import SearchBox from './SearchBox';
 import ResultsBox from './ResultsBox';
 
-class Routes extends React.Component {
-    render() {
-        const { formData, setFormData } = this.props;
-        return (
-                <React.Fragment>
-                    <Route exact path='/' render={(rtProps) => <SearchBox {...rtProps} setFormData={setFormData} />} />
-                    <Route exact path='/' render={(rtProps) => <ResultsBox {...rtProps} formData={formData} />} />
-                </React.Fragment>
-        )
-    }
-}
+const Routes = (props) => {
+  const { formData, setFormData } = props;
+  return (
+    <>
+      <Route exact path="/" render={(rtProps) => <SearchBox {...rtProps} setFormData={setFormData} />} />
+      <Route exact path="/" render={(rtProps) => <ResultsBox {...rtProps} formData={formData} />} />
+    </>
+  );
+};
 
 export default Routes;
